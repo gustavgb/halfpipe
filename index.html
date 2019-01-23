@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+<span id="counter">0</span> seconds passed.
+
+<script src="index.js"></script>
+
+<script>
+
+var handler = trout({
+  count: 0
+})
+
+handler.action('increment', function (state) {
+  return Object.assign({}, state, {
+    count: state.count + 1
+  })
+})
+
+setInterval(function () {
+  handler.action('increment')
+
+  document.getElementById('counter').innerText = handler.state.count
+}, 1000)
+
+</script>
+
+</body>
+
+</html>
