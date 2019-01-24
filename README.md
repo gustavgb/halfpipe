@@ -1,2 +1,2 @@
-# trout
+# halfpipe
 Prototype state machine

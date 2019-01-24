@@ -1,0 +1,23 @@
+{
+  "name": "halfpipe",
+  "version": "0.0.1",
+  "description": "A simple state machine",
+  "main": "halfpipe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavgb/halfpipe.git"
+  },
+  "keywords": [
+    "state",
+    "halfpipe"
+  ],
+  "author": "Gustav Burchardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavgb/halfpipe/issues"
+  },
+  "homepage": "https://github.com/gustavgb/halfpipe#readme"
+}

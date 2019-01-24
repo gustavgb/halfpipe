@@ -1,0 +1,43 @@
+<html>
+
+<body>
+
+<span id="counter">0</span> seconds passed.
+
+<script src="lib/halfpipe.js"></script>
+
+<script>
+
+var container = halfpipe.container(function reducer (state, action) {
+  var payload = action[1]
+  switch (action[0]) {
+    case 'increment':
+      return Object.assign({}, state, {
+        count: state.count + 1
+      })
+    case 'set':
+      return Object.assign({}, state, {
+        count: payload
+      })
+    default:
+      return {
+        count: 0
+      }
+  }
+})
+
+var subscriber = container.subscribe(function (state) {
+  console.log(state)
+})
+
+setInterval(function () {
+  container.action('increment')
+
+  document.getElementById('counter').innerText = container.getState().count
+}, 1000)
+
+</script>
+
+</body>
+
+</html>
