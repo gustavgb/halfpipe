@@ -1,2 +1,2 @@
 # halfpipe
-Prototype state machine
+Simple state machine
